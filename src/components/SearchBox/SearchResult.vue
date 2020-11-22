@@ -73,21 +73,21 @@
         <div class="container-box">
           <!-- 평균응답시 간 -->
 
-          <BarSearchChart
+          <LineSearchChart
             :idx="3"
             :title="'AverageRespond'"
             :value="searchChart.AverageRespond.all"
           >
-          </BarSearchChart>
+          </LineSearchChart>
 
           <!-- 서비스처리량 -->
 
-          <BarSearchChart
+          <LineSearchChart
             :idx="4"
             :title="'ServiceAmount'"
             :value="searchChart.ServiceAmount.all"
           >
-          </BarSearchChart>
+          </LineSearchChart>
         </div>
       </div>
     </section>
