@@ -3,9 +3,9 @@ import axios from "axios";
 
 const API_URL = 
   { 
-    baseUrl: "http://20.194.32.161",
-    graphql: "http://20.194.32.161:8090/graphql",
-    socket:  "ws://20.194.32.161:9000"
+    baseUrl: "http://",
+    graphql: "http://:8090/graphql",
+    socket:  "ws://:9000"
   }
 
 export default {
