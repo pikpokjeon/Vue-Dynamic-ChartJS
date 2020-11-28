@@ -1,4 +1,14 @@
-# monitoring
+# Vue Wrapper ChartJS Components
+- Supports Dark/Light Themes
+- Suitable for VueJS framework
+
+## 1. Dynamic Component
+- Updates when chart gets data
+
+## 2. Dynamic Streaming Component
+- Updates every sat time when chart gets data
+- Has in realtime updating animation and remove passed data in dataset array 
+- Has lower GPU usage compares to ChartJS Streaming Plugin
 
 ## Project setup
 ```
@@ -10,15 +20,3 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
