@@ -36,8 +36,30 @@ export default {
   components: {
     LineBase,
   },
+  methods: {
+    async getExcelFile(callback) {
+      const { searchDate, title } = this;
+      const param = `date: "${searchDate}", name: "${title}"`;
+      const res = await api.downloadExcelFile(param);
+      this.fileName = res.fileName;
+      this.filePath = res.filePath;
+      const downloadURL = `${api.API_URL.baseUrl}/download/${this.fileName}`;
+      await window.open(downloadURL);
+      await callback();
+    },
+    requestToRemoveFile() {
+      const param = `filePath:"${this.filePath}", fileName:"${this.fileName}"`;
+      api.requestToRemoveFile(param);
+    },
+  },
 
-  computed:{
+  computed: _.extend(
+    {
+       getTitleInKor() {
+      const title = translateWord(this.title);
+      return title;
+    },
+
     getTime() {
 
       const sortedArray = Array.from(this.searchChart[this.title].stream).map( 
@@ -126,7 +148,8 @@ export default {
       return data;
     },
     },
-  
+   mapState(["searchChart", "searchDate"])
+  ),
 
 
 
