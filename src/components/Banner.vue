@@ -2,8 +2,7 @@
   <v-app-bar app color="rgb(34 36 40 / 48%)">
     <div class="banner">
       <div class="logo">
-        <img src="../../public/logo.png" />
-        <span><img src="../../public/logo2.png" /></span>
+       <h3>Vue-Chart-Component</h3>
       </div>
       <v-btn
         v-if="!isOnTop"
@@ -13,7 +12,7 @@
         outlined
         rounded
         ><v-icon>{{ downIcon }}</v-icon
-        >데이터 조회</v-btn
+        >StreamingChart</v-btn
       >
 
       <v-btn
@@ -24,7 +23,7 @@
         outlined
         rounded
         ><v-icon>{{ upIcon }}</v-icon
-        >실시간 데이터</v-btn
+        >BasicChart</v-btn
       >
     </div>
   </v-app-bar>
